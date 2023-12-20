@@ -1,0 +1,21 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+   "src/**/*", 
+   "src/**/*.vue",
+   "node_modules/@prisma/client",
+   "src/services/**/*.ts",
+   "src/store/**/*.ts"
+  ],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    
+    "types": ["vue", "@vue/apollo-composable"],
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

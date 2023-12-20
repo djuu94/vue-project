@@ -1,0 +1,24 @@
+mutation createUser($name: String!, $email: String!, $password: String!) {
+  createUser(name: $name, email: $email, password: $password) {
+    id
+    name
+    email
+    __typename
+  }
+}
+mutation loginUser($name: String!, $password: String!) {
+  loginUser(name: $name, password: $password) {
+    id
+    name
+    email
+    __typename
+  }
+}
+mutation addFavoriteMovie($userId: Int!, $movieId: String!) {
+  addFavoriteMovie(userId: $userId, movieId: $movieId) {
+    id
+    movieId
+    userId
+    __typename
+  }
+}
